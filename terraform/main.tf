@@ -7,6 +7,7 @@ provider "aws" {
   region = var.region
 }
 
+// this will give you the list of all availability zones
 data "aws_availability_zones" "available" {}
 
 locals {

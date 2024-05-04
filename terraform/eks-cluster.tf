@@ -14,6 +14,7 @@ module "eks" {
 
   }
 
+  // autoscaling group information for the node group 
   eks_managed_node_groups = {
     one = {
       name = "node-group-1"
