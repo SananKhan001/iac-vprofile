@@ -14,10 +14,10 @@ on:
 
 env:
   # Credentials for deployment to AWS
-  AWS_ACCESS_KEY_ID: $(( secrets.AWS_ACCESS_KEY_ID ))
-  AWS_SECRET_ACCESS_KEY: $(( secrets.AWS_SECRET_ACCESS_KEY ))
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   # s3 bucket for the Terraform state
-  BUCKET_TF_STATE: $(( secrets.BUCKET_TF_STATE ))
+  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
   AWS_REGION: us-east-2
   EKS_CLUSTER: vprofile-eks
 
@@ -59,4 +59,3 @@ jobs:
       if: steps.plan.outcome == 'failure'
       run: exit 1
 
-      
