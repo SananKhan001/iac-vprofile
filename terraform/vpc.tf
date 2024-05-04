@@ -28,5 +28,3 @@ module "vpc" {
     "kubernetes.io/role/internal-elb"             = 1
   }
 }
-
-
